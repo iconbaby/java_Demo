@@ -1,9 +1,17 @@
+import abstractfactory.Builder;
 import abstractfactory.MailProvider;
 import abstractfactory.SmsProvider;
+
+import adapter.*;
 import commonfactory.SenderFactory;
 import commonfactory.Sender;
+import decorator.Decorator;
+import decorator.Source;
+import decorator.Sourceble;
 import multifactory.MultiSenderFactory;
 import multifactory.StaticFactory;
+import proxy.Agent;
+import proxy.Rentble;
 import singleon.Book;
 
 import java.util.Vector;
@@ -39,8 +47,38 @@ public class Main {
         /*单例模式*/
 //        Book book = Book.getBook();
 //        book.writeNo();
+        /*建造者模式*/
+//        Builder builder = new Builder();
+//        builder.produceMailSender(10);
 
+        /*适配器模式*/
+//        Sportable adapter = new Adapter();
+//        adapter.run();
+//        adapter.eat();
 
+        /*对象适配器模式*/
+//        Sportable sportable = new Wraper(new Animal());
+//        sportable.run();
 
+        /*接口适配器*/
+//        Bird parrot = new Parrot();
+//        parrot.eat();
+
+        /*装饰器模式*/
+//        Sourceble decotator = new Decorator(new Source());
+//        decotator.run();
+
+        /*代理模式*/
+        Rentble agent = new Agent();
+        agent.rent();
+
+    }
+
+    public class Prototype implements Cloneable {
+        public Object clone() throws CloneNotSupportedException {
+            Prototype proto = (Prototype) super.clone();
+            return proto;
+
+        }
     }
 }
