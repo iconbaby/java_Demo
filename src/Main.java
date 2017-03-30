@@ -3,6 +3,7 @@ import abstractfactory.MailProvider;
 import abstractfactory.SmsProvider;
 
 import adapter.*;
+import com.slkk.thread.TestTread;
 import commonfactory.SenderFactory;
 import commonfactory.Sender;
 import decorator.Decorator;
@@ -15,6 +16,7 @@ import proxy.Rentble;
 import singleon.Book;
 
 import java.util.Vector;
+
 
 public class Main {
 
@@ -69,8 +71,12 @@ public class Main {
 //        decotator.run();
 
         /*代理模式*/
-        Rentble agent = new Agent();
-        agent.rent();
+//        Rentble agent = new Agent();
+//        agent.rent();
+        /*线程相关*/
+
+        TestTread testTread = new TestTread();
+        testTread.test();
 
     }
 
